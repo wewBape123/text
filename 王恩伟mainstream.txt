@@ -1,0 +1,58 @@
+ajax技术框架：
+1.jQuery：
+一个轻量级的JavaScript框架，兼容css以及许多浏览器，能更方便的处理html，documents，events，实现动画效果，并且方便的提供与网站提供ajax交互
+
+
+2.css选择器
+id
+类
+标签
+通配符
+群组
+
+3.简述的时间冒泡，
+dom事件流存在三个阶段；
+事件捕获：当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内的进行事件传播。
+事件冒泡：与事件捕获相反，事件由内往外传播，直到根节点。
+无论捕获还是冒泡，他们都有一个共同的行为，就是事件的传播，
+dom标准事件流的触发的先后顺序为，先捕获在冒泡，当触发dom事件的时候，会先对事件进行捕获，捕获之后再进行冒泡。
+
+4.如何居中一个浮动元素
+（1.）设置容器浮动方式其主要为相对定位。然后确立宽高，设置内外层外边距。
+（2.）设置为绝对定位，层的定位点，使用外补丁margin负值的方法。
+
+
+5.什么情况下遇到跨域问题，解决方法？
+跨域问题浏览器为了实现安全实施的同源问题导致的，不允许双方通信，但是可以访问。同源的意思就是两个URl的域名，协议，端口要完全相同。
+
+6.如何判断一个函数变量配置时候对象还是数组？
+1.typeof：不能准确判断其身份，字符串得到string，数字和nan得到number，函数会得到function等。但是数组，对象，null都会得到object，所以局限了
+2.instanceof：instanceof可以判断出数组在原型链上满足arr instanceof array 和arr instanceof object 都返回true
+object类型变量满足obj instanceof array 返回false，obj insatanceof object返回true。
+prototype.tostring.call()可以精准判断变量类型，它返回【object constructorname】的字符串格式。
+判断简单的数据类型可以typeof，而数组，对象的判断可以用instanceof和propetype。tostring。call
+
+7.title属性和Alt属性的区别
+当图片不输出信息的时候，会显示Alt信息，鼠标放上去才会显示title信息，当图片输出正长的时候，不会出现Alt信息，鼠标放上去才会显示tittle信息。
+
+8.http状态码
+1xx：信息状态码；
+2xx：信息请求成功：
+3xx：重定向
+4xx：客户端错误
+5xx：服务器错误
+
+9.垂直居中的方法：
+A.   
+ 单行文本：使用height和line-height设置同样 的高度。
+B.     
+css方法：1.定义一个div，先实现水平居中（margin：0 auto）
+2.设置组元素html和body宽高为100%，清除默认样式，
+3.往下移，position：relative。top：50%；
+往上移：margin-top;-150px；或者是（ transform: translateY(-50%)）
+C.
+还可以是其他的，比如将父容器设置为display：table，但是会破坏整体布局，所以不推荐使用
+10.js事件流：
+捕获，触发，冒泡。
+
+
